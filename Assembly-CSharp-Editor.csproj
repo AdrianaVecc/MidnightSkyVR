@@ -50,13 +50,8 @@
      <Compile Include="Assets\GoogleVR\Editor\GvrAudioSoundfieldEditor.cs" />
      <Compile Include="Assets\GoogleVR\Editor\GvrAudioSourceEditor.cs" />
      <Compile Include="Assets\GoogleVR\Editor\GvrCompatibilityChecker.cs" />
-     <Compile Include="Assets\GoogleVR\Legacy\Editor\GvrGazeEditor.cs" />
-     <Compile Include="Assets\GoogleVR\Legacy\Editor\GvrMenu.cs" />
-     <Compile Include="Assets\GoogleVR\Legacy\Editor\GvrViewerEditor.cs" />
-     <Compile Include="Assets\GoogleVR\Legacy\Editor\StereoControllerEditor.cs" />
      <None Include="Assets\GoogleVR\Distortion\GvrDistortion.cginc" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
-     <None Include="Assets\GoogleVR\Legacy\Resources\UnlitTexture.shader" />
      <None Include="Assets\Plugins\Android\proguard-gvr.txt" />
      <None Include="Assets\GoogleVR\Shaders\GvrAdditiveOverlay.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlay.shader" />
@@ -66,7 +61,6 @@
      <None Include="Assets\GoogleVR\Shaders\GvrReticleShader.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlay.shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest-Cardboard.xml" />
-     <None Include="Assets\GoogleVR\Legacy\Resources\SolidColor.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnityCompatibility.cginc" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
