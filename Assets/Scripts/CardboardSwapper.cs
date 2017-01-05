@@ -9,7 +9,7 @@ public class CardboardSwapper : MonoBehaviour {
 	
 	void Update () {
 		this.gameObject.transform.Find("Canvas/CardboardButton").gameObject.SetActive(!GvrViewer.Instance.VRModeEnabled);
-		if (GvrViewer.Instance.Tilted || GvrViewer.Instance.BackButtonPressed) 
+		if (GvrViewer.Instance.Tilted) 
 		{
 			DisableVR();
 		}
