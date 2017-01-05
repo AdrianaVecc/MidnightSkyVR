@@ -4,6 +4,8 @@ using System.Collections;
 public class CardboardSwapper : MonoBehaviour {
 
 	void Start () {
+
+		GvrViewer.Instance.VRModeEnabled = false;
 	
 	}
 	
