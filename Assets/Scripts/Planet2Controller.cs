@@ -8,10 +8,10 @@ public class Planet2Controller : MonoBehaviour {
 	void Start () {
 		lastPosition = transform.position;
 	}
-	
+		
 	// Update is called once per frame
 	public void LookAtPlanet2 () {
-		lastPosition = new Vector3(lastPosition.x, lastPosition.y + 0.5f, lastPosition.z + 0.5f);
+		lastPosition = new Vector3(lastPosition.x, lastPosition.y + 0.1f, lastPosition.z + 0.1f);
 		transform.position = lastPosition;
 	}
 }

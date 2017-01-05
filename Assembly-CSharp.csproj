@@ -104,6 +104,7 @@
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrFPS.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrIntent.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
+     <Compile Include="Assets\Scripts\AllPlanetsController.cs" />
      <Compile Include="Assets\Scripts\CardboardSwapper.cs" />
      <Compile Include="Assets\Scripts\Planet2Controller.cs" />
      <None Include="Assets\GoogleVR\Distortion\GvrDistortion.cginc" />
