@@ -22,3 +22,5 @@ To install, email the .apk file to an Android device that supports Google Cardbo
 
 ![MidnightSkyVR](https://pbs.twimg.com/media/C1LAIuZW8AA2Bzg.jpg)
 
+![MidnightSkyVR](http://g.recordit.co/dzR6Awj3py.gif)
+
