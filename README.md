@@ -1,6 +1,8 @@
 MidnightSkyVR is an MVP to toy around with the possibilities that Virtual Reality can offer.
 
 It features a space universe in which you can float.
+Press the trigger to move forward in the direction you're looking at.
+Press again to stop.
 
 ### Support:
 - Android with Google Cardboard
@@ -21,6 +23,4 @@ To install, email the .apk file to an Android device that supports Google Cardbo
 - player interactions with space elements
 
 ![MidnightSkyVR](https://pbs.twimg.com/media/C1LAIuZW8AA2Bzg.jpg)
-
-![MidnightSkyVR](http://g.recordit.co/dzR6Awj3py.gif)
 
