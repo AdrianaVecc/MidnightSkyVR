@@ -105,8 +105,10 @@
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrIntent.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
      <Compile Include="Assets\Scripts\AllPlanetsController.cs" />
+     <Compile Include="Assets\Scripts\AutoFloat.cs" />
      <Compile Include="Assets\Scripts\CardboardSwapper.cs" />
      <Compile Include="Assets\Scripts\Planet2Controller.cs" />
+     <Compile Include="Assets\Scripts\ShootingStarController.cs" />
      <None Include="Assets\GoogleVR\Distortion\GvrDistortion.cginc" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
      <None Include="Assets\GoogleVR\Legacy\Resources\UnlitTexture.shader" />
