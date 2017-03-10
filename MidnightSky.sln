@@ -1,9 +1,9 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{1881F30C-61B0-9C5D-F383-00DA012E2791}") = "MidnightSky", "Assembly-CSharp.csproj", "{7918A840-F4C8-6663-8AA6-78D3E6FD3CE3}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidnightSky", "Assembly-CSharp.csproj", "{7918A840-F4C8-6663-8AA6-78D3E6FD3CE3}"
 EndProject
-Project("{1881F30C-61B0-9C5D-F383-00DA012E2791}") = "MidnightSky", "Assembly-CSharp-Editor.csproj", "{F842FA83-C7AB-4A51-9D49-C408FC604DC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidnightSky", "Assembly-CSharp-Editor.csproj", "{F842FA83-C7AB-4A51-9D49-C408FC604DC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
