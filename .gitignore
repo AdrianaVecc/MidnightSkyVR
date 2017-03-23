@@ -19,6 +19,8 @@ ExportedObj/
 *.pidb
 *.booproj
 *.svd
+*.apk
+*.keystore
 
 
 # Unity3D generated meta files
