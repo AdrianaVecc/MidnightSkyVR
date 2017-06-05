@@ -12,14 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#if !UNITY_EDITOR
-#if UNITY_ANDROID
-#define ANDROID_DEVICE
-#elif UNITY_IPHONE
-#define IPHONE_DEVICE
-#endif
-#endif
-
 using UnityEngine;
 using System.Collections.Generic;
 using System;
@@ -63,6 +55,10 @@ namespace Gvr.Internal {
 
     public virtual RenderTexture CreateStereoScreen() {
       float scale = GvrViewer.Instance.StereoScreenScale;
+#if UNITY_5_6_OR_NEWER
+      // Unity  halved the render texture size on 5.6, so we compensate here.
+      scale *= 2.0f;
+#endif  // UNITY_5_6_OR_NEWER
       int width = Mathf.RoundToInt(Screen.width * scale);
       int height = Mathf.RoundToInt(Screen.height * scale);
       if (this.RequiresNativeDistortionCorrection()) {
@@ -229,13 +225,11 @@ namespace Gvr.Internal {
       if (device == null) {
 #if UNITY_EDITOR
         device = new EditorDevice();
-#elif ANDROID_DEVICE
-    #if UNITY_HAS_GOOGLEVR
+#elif UNITY_HAS_GOOGLEVR && (UNITY_ANDROID || UNITY_IPHONE)
         device = new UnityVRDevice();
-    #else
+#elif UNITY_ANDROID
         device = new AndroidDevice();
-    #endif  // UNITY_HAS_GOOGLEVR
-#elif IPHONE_DEVICE
+#elif UNITY_IOS
         device = new iOSDevice();
 #else
         throw new InvalidOperationException("Unsupported device.");

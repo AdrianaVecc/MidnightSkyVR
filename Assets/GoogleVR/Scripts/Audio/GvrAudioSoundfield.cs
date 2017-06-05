@@ -20,6 +20,8 @@ using System.Collections;
 // audio sample should be in Ambix (ACN-SN3D) format.
 [AddComponentMenu("GoogleVR/Audio/GvrAudioSoundfield")]
 public class GvrAudioSoundfield : MonoBehaviour {
+  /// Denotes whether the room effects should be bypassed.
+  public bool bypassRoomEffects = true;
 
   /// Input gain in decibels.
   public float gainDb = 0.0f;
@@ -195,6 +197,8 @@ public class GvrAudioSoundfield : MonoBehaviour {
     for (int channelSet = 0; channelSet < audioSources.Length; ++channelSet) {
       GameObject channelSetObject = new GameObject("Channel Set " + channelSet);
       channelSetObject.transform.parent = gameObject.transform;
+      channelSetObject.transform.localPosition = Vector3.zero;
+      channelSetObject.transform.localRotation = Quaternion.identity;
       channelSetObject.hideFlags = HideFlags.HideAndDontSave;
       audioSources[channelSet] = channelSetObject.AddComponent<AudioSource>();
       audioSources[channelSet].enabled = false;
@@ -202,6 +206,9 @@ public class GvrAudioSoundfield : MonoBehaviour {
       audioSources[channelSet].bypassReverbZones = true;
       audioSources[channelSet].dopplerLevel = 0.0f;
       audioSources[channelSet].spatialBlend = 0.0f;
+#if UNITY_5_5_OR_NEWER
+      audioSources[channelSet].spatializePostEffects = true;
+#endif  // UNITY_5_5_OR_NEWER
       audioSources[channelSet].outputAudioMixerGroup = mixer.FindMatchingGroups("Master")[0];
     }
     OnValidate();
@@ -253,6 +260,7 @@ public class GvrAudioSoundfield : MonoBehaviour {
                                                      GvrAudio.ConvertAmplitudeFromDb(gainDb));
       }
     }
+    GvrAudio.UpdateAudioSoundfield(id, this);
   }
 
   void OnValidate () {
@@ -327,6 +335,7 @@ public class GvrAudioSoundfield : MonoBehaviour {
     if (id < 0) {
       id = GvrAudio.CreateAudioSoundfield();
       if (id >= 0) {
+        GvrAudio.UpdateAudioSoundfield(id, this);
         for (int channelSet = 0; channelSet < audioSources.Length; ++channelSet) {
           InitializeChannelSet(audioSources[channelSet], channelSet);
         }
