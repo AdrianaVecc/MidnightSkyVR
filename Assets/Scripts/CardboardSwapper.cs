@@ -1,17 +1,18 @@
 ﻿using UnityEngine;
+using UnityEngine.VR;
 using System.Collections;
 
 public class CardboardSwapper : MonoBehaviour {
 
 	void Start () {
 
-		GvrViewer.Instance.VRModeEnabled = false;
+		VRSettings.enabled = false;
 	
 	}
 	
 	void Update () {
-		this.gameObject.transform.Find("Canvas/CardboardButton").gameObject.SetActive(!GvrViewer.Instance.VRModeEnabled);
-		if (GvrViewer.Instance.Tilted) 
+		this.gameObject.transform.Find("Canvas/CardboardButton").gameObject.SetActive(!VRSettings.enabled);
+		if (GvrViewer.Instance.Tilted || GvrViewer.Instance.BackButtonPressed) 
 		{
 			DisableVR();
 		}
@@ -20,11 +21,11 @@ public class CardboardSwapper : MonoBehaviour {
 
 	public void DisableVR ()
 	{
-		GvrViewer.Instance.VRModeEnabled = false;
+		VRSettings.enabled = false;
 	}
 
 	public void EnableVR ()
 	{
-		GvrViewer.Instance.VRModeEnabled = true;
+		VRSettings.enabled = true;
 	}
 }
