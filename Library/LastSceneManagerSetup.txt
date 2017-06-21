@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/Space_Playground.unity
+- path: Assets/Scene/Space.unity
   isLoaded: 1
   isActive: 1
