@@ -6,12 +6,16 @@ public class CardboardSwapper : MonoBehaviour {
 
 	void Start () {
 
-		VRSettings.enabled = false;
+		Screen.orientation = ScreenOrientation.Portrait;
+
+		DisableVR();
 	
 	}
 	
 	void Update () {
+		
 		this.gameObject.transform.Find("Canvas/CardboardButton").gameObject.SetActive(!VRSettings.enabled);
+
 		if (GvrViewer.Instance.Tilted || GvrViewer.Instance.BackButtonPressed) 
 		{
 			DisableVR();
@@ -21,11 +25,19 @@ public class CardboardSwapper : MonoBehaviour {
 
 	public void DisableVR ()
 	{
+
+		Screen.orientation = ScreenOrientation.Portrait;
+
 		VRSettings.enabled = false;
+	
 	}
 
 	public void EnableVR ()
 	{
+
+		Screen.orientation = ScreenOrientation.LandscapeLeft;
+
 		VRSettings.enabled = true;
+
 	}
 }
