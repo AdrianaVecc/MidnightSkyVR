@@ -6,8 +6,6 @@ public class CardboardSwapper : MonoBehaviour {
 
 	void Start () {
 
-		Screen.orientation = ScreenOrientation.Portrait;
-
 		DisableVR();
 	
 	}
