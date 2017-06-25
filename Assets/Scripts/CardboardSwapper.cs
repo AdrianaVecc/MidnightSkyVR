@@ -24,16 +24,13 @@ public class CardboardSwapper : MonoBehaviour {
 	public void DisableVR ()
 	{
 
-		Screen.orientation = ScreenOrientation.Portrait;
-
 		VRSettings.enabled = false;
+		Camera.main.ResetAspect ();
 	
 	}
 
 	public void EnableVR ()
 	{
-
-		Screen.orientation = ScreenOrientation.LandscapeLeft;
 
 		VRSettings.enabled = true;
 
